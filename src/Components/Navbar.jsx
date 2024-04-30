@@ -21,7 +21,7 @@ const Navbar = () => {
         else setDisplay1("m-0")
     };
     return (
-        <nav className="navbar navbar-expand-lg bg-light border-bottom border-black" style={{ height: 100 }}>
+        <nav className="navbar navbar-expand-lg bg-light border-bottom border-black" style={{ height: 80 }}>
             <div className="container-fluid">
                 <a className="navbar-brand d-lg-none" href="/">
                     <img src={logo} alt="" />
@@ -30,18 +30,50 @@ const Navbar = () => {
                     <span className="navbar-toggler-icon" />
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav mx-auto">
-                        <li className="nav-item">
-                            <a className="nav-link" href="/"><FaInstagram /></a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="/"><FiFacebook /></a>
-                        </li>
-                        <li className="nav-item">
-                            <button onClick={changeHide} className="nav-link"><CiSearch /></button>
-                        </li>
-                    </ul>
                     <ul className={display}>
+                        <a className="navbar-brand d-none d-lg-block" href="/">
+                            <img src={logo} alt="" />
+                        </a>
+                        <li className="nav-item">
+                            <div class="dropdown">
+                                <a class="nav-link dropdown-toggle d-flex align-items-center mx-2" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    KİŞİ
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/male">Hamısı</a></li>
+                                    <li><a class="dropdown-item" href="/">Köynəklər</a></li>
+                                    <li><a class="dropdown-item" href="/">Polo köynəklər</a></li>
+                                    <li><a class="dropdown-item" href="/">Hoodies & Sweatshirts</a></li>
+                                    <li><a class="dropdown-item" href="/">Gödəkçələr və Paltolar</a></li>
+                                    <li><a class="dropdown-item" href="/">Denim</a></li>
+                                    <li><a class="dropdown-item" href="/">Kostyumlar</a></li>
+                                    <li><a class="dropdown-item" href="/">Şortiklər</a></li>
+                                    <li><a class="dropdown-item" href="/">Pijamalar</a></li>
+                                    <li><a class="dropdown-item" href="/">Digər</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li className="nav-item">
+                            <div class="dropdown">
+                                <a class="nav-link dropdown-toggle d-flex align-items-center mx-2" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    QADIN
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/female">Hamısı</a></li>
+                                    <li><a class="dropdown-item" href="/">Donlar</a></li>
+                                    <li><a class="dropdown-item" href="/">Köynəklər</a></li>
+                                    <li><a class="dropdown-item" href="/">Sviterlər və Kardiqanlar</a></li>
+                                    <li><a class="dropdown-item" href="/">Gödəkçələr və Paltolar</a></li>
+                                    <li><a class="dropdown-item" href="/">Hoodies & Sweatshirts</a></li>
+                                    <li><a class="dropdown-item" href="/">Yubkalar</a></li>
+                                    <li><a class="dropdown-item" href="/">Denim</a></li>
+                                    <li><a class="dropdown-item" href="/">Şalvarlar</a></li>
+                                    <li><a class="dropdown-item" href="/">Şortiklər</a></li>
+                                    <li><a class="dropdown-item" href="/">Pijamalar</a></li>
+                                    <li><a class="dropdown-item" href="/">Digər</a></li>
+                                </ul>
+                            </div>
+                        </li>
                         <li className="nav-item">
                             <div class="dropdown">
                                 <a class="nav-link dropdown-toggle d-flex align-items-center mx-2" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -54,46 +86,20 @@ const Navbar = () => {
                                 </ul>
                             </div>
                         </li>
-                        <a className="navbar-brand d-none d-lg-block" href="/">
-                            <img src={logo} alt="" />
-                        </a>
                         <li className="nav-item">
                             <div class="dropdown">
                                 <a class="nav-link dropdown-toggle d-flex align-items-center mx-2" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    KİŞİ
+                                    MƏHSULLAR
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="/male">T-shirts</a></li>
-                                    <li><a class="dropdown-item" href="/">Polo shirts</a></li>
-                                    <li><a class="dropdown-item" href="/">Hoodies & Sweatshirts</a></li>
-                                    <li><a class="dropdown-item" href="/">Jackets & Coats</a></li>
-                                    <li><a class="dropdown-item" href="/">Denim</a></li>
-                                    <li><a class="dropdown-item" href="/">Suits</a></li>
-                                    <li><a class="dropdown-item" href="/">Pants</a></li>
-                                    <li><a class="dropdown-item" href="/">Shorts</a></li>
-                                    <li><a class="dropdown-item" href="/">Sleepwear</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li className="nav-item">
-                            <div class="dropdown">
-                                <a class="nav-link dropdown-toggle d-flex align-items-center mx-2" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    QADIN
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="/male">T-shirts</a></li>
-                                    <li><a class="dropdown-item" href="/">Polo shirts</a></li>
-                                    <li><a class="dropdown-item" href="/">Hoodies & Sweatshirts</a></li>
-                                    <li><a class="dropdown-item" href="/">Jackets & Coats</a></li>
-                                    <li><a class="dropdown-item" href="/">Denim</a></li>
-                                    <li><a class="dropdown-item" href="/">Suits</a></li>
-                                    <li><a class="dropdown-item" href="/">Pants</a></li>
-                                    <li><a class="dropdown-item" href="/">Shorts</a></li>
-                                    <li><a class="dropdown-item" href="/">Sleepwear</a></li>
+                                    <li><a class="dropdown-item" href="/">KİRAYƏ</a></li>
+                                    <li><a class="dropdown-item" href="/">SATIŞ</a></li>
+                                    <li><a class="dropdown-item" href="/">BRENDLƏR</a></li>
                                 </ul>
                             </div>
                         </li>
                     </ul>
+                    
                     <ul className={display1}>
                         <li className='nav-item'>
                             <div className="input-group" style={{width:"880px"}} id='search'>
@@ -120,13 +126,18 @@ const Navbar = () => {
                             <a className="nav-link" href="/"><GoHeart /></a>
                         </li>
                         <li className="nav-item">
-                            <a href='/signup' className='btn btn-dark ms-2'>SIGN UP</a>
+                            <div class="dropdown">
+                                <a class="btn btn-dark ms-2 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Qeydiyyatdan Keç
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/signup">Mağaza</a></li>
+                                    <li><a class="dropdown-item" href="/signup2">Fiziki Şəxs</a></li>
+                                </ul>
+                            </div>
                         </li>
                         <li className="nav-item">
-                            <a href='/login' className='btn ms-2 text-decoration-underline'>Log in</a>
-                        </li>
-                        <li className="nav-item">
-                            <a href='/profile' className='btn ms-2 text-decoration-underline'>Profile</a>
+                            <a href='/login' className='btn btn-outline-dark ms-2 btn'>Daxil Ol</a>
                         </li>
                     </ul>
                 </div>

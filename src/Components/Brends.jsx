@@ -8,8 +8,8 @@ import brand5 from '../images/brand-logos_AGOLDE_olive.png'
 
 const Brends = () => {
     return (
-        <div className="container px-4 pb-5" id="icon-grid">
-            <h2 className="pb-2 border-bottom text-center">BRENDLƏR</h2>
+        <div className="container pb-5" id="icon-grid">
+            <h2 className="pb-2 border-bottom border-black">Brendlər</h2>
             <div class="h-100 mt-5">
                 <div class="row align-items-center h-100">
                     <div class="container rounded">

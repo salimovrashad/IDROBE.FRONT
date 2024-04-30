@@ -9,6 +9,7 @@ import Profile from './pages/Profile'
 import Male from './pages/Male'
 import Female from './pages/Female'
 import Filters from './pages/Filters'
+import SignUp2 from './pages/SignUp2'
 
 
 const Main = () => {
@@ -18,6 +19,7 @@ const Main = () => {
       <Route path='/home' element={<Home />}></Route>
       <Route path='/success' element={<Success />}></Route>
       <Route path='/signup' element={<SignUp />}></Route>
+      <Route path='/signup2' element={<SignUp2 />}></Route>
       <Route path='/login' element={<Login />}></Route>
       <Route path='/profile' element={<Profile />}></Route>
       <Route path='/male' element={<Male />}></Route>

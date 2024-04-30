@@ -1,5 +1,7 @@
 import React from 'react'
 import '../css/product.css'
+import { HiOutlineShoppingBag } from "react-icons/hi2";
+import { IoMdHeartEmpty } from "react-icons/io";
 
 const ShopCard = ({ photo, photo2, title, price, id }) => {
     return (
@@ -10,18 +12,20 @@ const ShopCard = ({ photo, photo2, title, price, id }) => {
                         <img height={"400px"} className="pic-1" src={photo} alt='/' />
                         <img height={"400px"} className="pic-2" src={photo2} alt='/' />
                     </a>
-                    <span className="product-sale-label">{price} AZN</span>
-                    <a href="/" className="product-like-icon" data-tip="Add to Wishlist">
-                        <i className="far fa-heart" />
-                    </a>
-                    <ul className="product-links">
-                        <li><a href="/"><i className="fa fa-search" /></a></li>
-                        <li><a href="/"><i className="fas fa-shopping-cart" /></a></li>
-                        <li><a href="/"><i className="fa fa-random" /></a></li>
-                    </ul>
+                </div>
+                <div class="d-flex flex-row-reverse justify-content-between align-items-center mt-2 mb-2">
+                    <span className='fs-4'><HiOutlineShoppingBag /> <IoMdHeartEmpty /></span>
+                    <div class="colors">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    
                 </div>
                 <div className="product-content">
                     <h3 className="title"><a href="/">{title}</a></h3>
+                    <p> <span className='text-danger'>250m</span> <span className='px-1'></span> <span className='text-decoration-line-through'>350m</span> </p>
                 </div>
             </div>
         </div>

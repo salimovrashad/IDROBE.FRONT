@@ -1,22 +1,18 @@
 import React from 'react'
 import Navbar from '../Components/Navbar'
 
-const SignUp = () => {
+const SignUp2 = () => {
     return (
         <>
             <Navbar />
             <div className='d-flex justify-content-center'>
                 <section className="get-in-touch">
-                    <h1 className="title">Bizə qoşul (Mağaza)</h1>
+                    <h1 className="title">Bizə qoşul (Fiziki şəxs)</h1>
                     <form className="contact-form row">
 
                         <div className="form-field col-lg-6">
                             <input id="name" className="input-text js-input" type="text" required />
                             <label className="label" htmlFor="name">Ad/ Soyad/ Ata adı</label>
-                        </div>
-                        <div className="form-field col-lg-6 ">
-                            <input id="text" className="input-text js-input" type="text" required />
-                            <label className="label" htmlFor="text">Mağaza</label>
                         </div>
                         <div className="form-field col-lg-6 ">
                             <input id="pass" className="input-text js-input" type="text" required />
@@ -25,11 +21,6 @@ const SignUp = () => {
                         <div className="form-field col-lg-6 ">
                             <input id="email" className="input-text js-input" type="email" required />
                             <label className="label" htmlFor="email">Email</label>
-                        </div>
-
-                        <div className="form-field col-lg-6">
-                            <input id="re-password" className="input-text js-input" type="text" required />
-                            <label className="label" htmlFor="re-password">Logo</label>
                         </div>
                         <div className="form-field col-lg-6 ">
                             <input id="phone" className="input-text js-input" type="number" required />
@@ -55,4 +46,4 @@ const SignUp = () => {
     )
 }
 
-export default SignUp
+export default SignUp2
