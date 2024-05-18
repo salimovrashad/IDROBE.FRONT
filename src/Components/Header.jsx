@@ -10,7 +10,7 @@ const Header = () => {
       <div className="w-75" data-aos="fade-right">
         <h1 className='text-light'>Bizimlə əməkdaşlıq edin</h1>
         <p className='text-light w-75'>Yüksək moda brendlərini onlayn olaraq kəşf edin. Ən son trendləri asanlıqla alın və ya icarəyə götürün.</p>
-        <button className='btn btn-outline-light'>Bizə qoşul</button>
+        <a href="/signup2" className='btn btn-outline-light'>Bizə qoşul</a>
       </div>
     </div>
   )

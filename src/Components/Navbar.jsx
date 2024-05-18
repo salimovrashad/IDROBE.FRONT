@@ -1,17 +1,17 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import logo from '../images/Logo İDrobe.png'
-import { FaInstagram } from "react-icons/fa";
-import { FiFacebook } from "react-icons/fi";
-import { CiSearch } from "react-icons/ci";
 import { GoHeart } from "react-icons/go";
 
 import flag from "../images/azerbaijan-flag.png"
 import flag1 from "../images/russian-flag.png"
 import flag2 from "../images/united-states-flag.png"
+import { LangContext } from '../context/LangContext';
 
 const Navbar = () => {
     const [display, setDisplay] = useState("navbar-nav mx-auto");
     const [display1, setDisplay1] = useState("d-none");
+
+    const [lang, setLang] = useContext(LangContext);
 
     const changeHide = () => {
         if (display !== "d-none navbar-nav mx-auto") setDisplay("d-none navbar-nav mx-auto");
@@ -37,7 +37,7 @@ const Navbar = () => {
                         <li className="nav-item">
                             <div class="dropdown">
                                 <a class="nav-link dropdown-toggle d-flex align-items-center mx-2" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    KİŞİ
+                                {lang === 'en' ? "MALE" : "KİŞİ"}
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="/male">Hamısı</a></li>
@@ -56,7 +56,7 @@ const Navbar = () => {
                         <li className="nav-item">
                             <div class="dropdown">
                                 <a class="nav-link dropdown-toggle d-flex align-items-center mx-2" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    QADIN
+                                    {lang === 'en' ? "FEMALE" : "QADIN"}
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="/female">Hamısı</a></li>
@@ -70,7 +70,7 @@ const Navbar = () => {
                                     <li><a class="dropdown-item" href="/">Şalvarlar</a></li>
                                     <li><a class="dropdown-item" href="/">Şortiklər</a></li>
                                     <li><a class="dropdown-item" href="/">Pijamalar</a></li>
-                                    <li><a class="dropdown-item" href="/">Digər</a></li>
+                                    <li><a class="dropdown-item" href="/">{lang === "en" ? "Log Out" : "Çıxış"}</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -87,22 +87,15 @@ const Navbar = () => {
                             </div>
                         </li>
                         <li className="nav-item">
-                            <div class="dropdown">
-                                <a class="nav-link dropdown-toggle d-flex align-items-center mx-2" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    MƏHSULLAR
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="/">KİRAYƏ</a></li>
-                                    <li><a class="dropdown-item" href="/">SATIŞ</a></li>
-                                    <li><a class="dropdown-item" href="/">BRENDLƏR</a></li>
-                                </ul>
-                            </div>
+                            <a class="nav-link d-flex align-items-center mx-2" href="/products" role="button">
+                                MƏHSULLAR
+                            </a>
                         </li>
                     </ul>
-                    
+
                     <ul className={display1}>
                         <li className='nav-item'>
-                            <div className="input-group" style={{width:"880px"}} id='search'>
+                            <div className="input-group" style={{ width: "880px" }} id='search'>
                                 <input type="text" className="form-control" placeholder="Mən Axtarıram" aria-label="Mən Axtarıram" aria-describedby="basic-addon2" />
                                 <div className="input-group-append">
                                     <span className="input-group-text" id="basic-addon2" onClick={changeHide}>X</span>
@@ -113,12 +106,19 @@ const Navbar = () => {
                     <ul className="navbar-nav mx-auto">
                         <li className="nav-item">
                             <div class="dropdown">
-                                <a class="nav-link dropdown-toggle d-flex align-items-center mx-2" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img className='mt-1 me-1' width={30} src={flag} alt="" />AZE
-                                </a>
+                                <button class="nav-link dropdown-toggle d-flex align-items-center mx-2" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img className='mt-1 me-1' width={30} src={lang === 'en' ? flag2 : flag} alt="" />{lang === 'en' ? "ENG" : "AZE"}
+                                </button>
                                 <ul class="dropdown-menu">
+                                    <li><button class="dropdown-item" onClick={() => {
+                                        lang === 'en' ? setLang('az') : setLang('az');
+                                        lang === 'en' ? localStorage.setItem('lang', 'az') : localStorage.setItem('lang', 'az');
+                                    }}><img className='mt-1 me-1' width={30} src={flag} alt="" />AZE</button></li>
                                     <li><a class="dropdown-item" href="/"><img className='mt-1 me-1' width={30} src={flag1} alt="" />RU</a></li>
-                                    <li><a class="dropdown-item" href="/"><img className='mt-1 me-1' width={30} src={flag2} alt="" />ENG</a></li>
+                                    <li><button class="dropdown-item" onClick={() => {
+                                        lang === 'az' ? setLang('en') : setLang('en');
+                                        lang === 'az' ? localStorage.setItem('lang', 'en') : localStorage.setItem('lang', 'en');
+                                    }}><img className='mt-1 me-1' width={30} src={flag2} alt="" />ENG</button></li>
                                 </ul>
                             </div>
                         </li>
@@ -127,12 +127,12 @@ const Navbar = () => {
                         </li>
                         <li className="nav-item">
                             <div class="dropdown">
-                                <a class="btn btn-dark ms-2 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="btn btn-dark ms-2 dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Qeydiyyatdan Keç
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="/signup">Mağaza</a></li>
-                                    <li><a class="dropdown-item" href="/signup2">Fiziki Şəxs</a></li>
+                                    <li><a class="dropdown-item" href="/">Mağaza</a></li>
+                                    <li><a class="dropdown-item" href="/">Fiziki Şəxs</a></li>
                                 </ul>
                             </div>
                         </li>

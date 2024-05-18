@@ -10,6 +10,7 @@ import Male from './pages/Male'
 import Female from './pages/Female'
 import Filters from './pages/Filters'
 import SignUp2 from './pages/SignUp2'
+import { LangProvider } from './context/LangContext'
 
 
 const Main = () => {
@@ -33,7 +34,9 @@ const Main = () => {
 const App = () => {
   return (
     <BrowserRouter>
-      <Main />
+      <LangProvider>
+        <Main />
+      </LangProvider>
     </BrowserRouter>
   )
 }

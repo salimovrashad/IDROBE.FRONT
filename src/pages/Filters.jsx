@@ -42,9 +42,7 @@ const Filters = () => {
             <Navbar />
             <p className='text-center fs-2 mt-5'>Geyimlərin Siyahısı</p>
             <div className="container-fluid">
-
                 <Row md={12} className="py-5 justify-content-center">
-
                     <Col sm={2} md={2}>
                         <h1 className='mx-2' onClick={changeHide}>Filter {display != "d-none" ? <MdArrowDropDown /> : <MdArrowLeft />}</h1>
                         <ListGroup className={display} id='filter'>

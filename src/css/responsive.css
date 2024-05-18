@@ -1,0 +1,232 @@
+@media only screen and (max-width: 450px) {
+    .nav-item{
+        margin-bottom: 15px;
+    }
+    .head-section {
+        width: 100%;
+        height: 647px;
+        background-image: url(../images/bg.png);
+        background-position: center;
+        background-size: cover;
+    }
+    .head-section .w-75{
+        width: 100% !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center !important;
+    }
+    .head-section h1{
+        font-size: 42px;
+        font-weight: 700;
+    }
+    .head-section p{
+        font-size: 16px;
+        font-weight: 400;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    .head-section .w-75 .w-75{
+        width: 90% !important;
+    }
+    .head-section a{
+        width: 229px;
+        height: 64px;
+        font-weight: 600;
+        font-size: 18px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .album .w-75{
+        width: 90% !important;
+    }
+    .album .w-75 h1 .all{
+        display: none;
+    }
+    .album .w-75 h1 .allres{
+        display: block;
+    }
+    .footres .w-75{
+        width: 90% !important;
+    }
+    footer a , footer p{
+        font-size: 12px !important;
+    }
+    .navbar-collapse{
+        background-color: white;
+        z-index: 123;
+        transform: translateY(12px);
+    }
+    .navbar-toggler{
+        transform: translateX(-20px);
+    }
+
+
+
+    .male-head-section {
+        width: 100%;
+        height: 647px;
+        background: #333 url("../images/image\ 29.png") center/cover no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .male-head-section .w-50{
+        width: 85% !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center !important;
+    }
+    .male-head-section h1 {
+        font-size: 40px;
+        font-weight: 700;
+    }
+    .male-head-section p {
+        font-size: 16px;
+        font-weight: 400;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    .male-head-section button {
+        width: 229px;
+        height: 64px;
+        font-weight: 600;
+        font-size: 18px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .female-head-section{
+        width: 100%;
+        height: 647px;
+        background-color: #333;
+        background-image: url("../images/image\ 27.png");
+        background-position: center;
+        background-size: cover;
+        align-items: center;
+    }
+    .female-head-section .w-50{
+        width: 85% !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center !important;
+    }
+    .female-head-section h1{
+        font-size: 40px;
+        font-weight: 700;
+    }
+    .female-head-section p{
+        font-size: 16px;
+        font-weight: 400;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    .female-head-section button{
+        width: 229px;
+        height: 64px;
+        font-weight: 600;
+        font-size: 18px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .saleorrent {
+        width: 100%;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
+    .saleorrent .left {
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 35%, rgba(0, 0, 0, 0.4) 100%), url(../images/salebg.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 90%;
+        height: 50vh;
+        position: relative;
+        border-radius: 15px;
+        margin-bottom: 10px;
+    }
+    .saleorrent .left p {
+        position: absolute;
+        top: 50%;
+        left: 33%;
+        color: white;
+        font-weight: 400;
+        font-size: 32px;
+        letter-spacing: 10px;
+    }
+    .saleorrent .right {
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 35%, rgba(0, 0, 0, 0.4) 100%), url(../images/kirayebg.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 90%;
+        height: 50vh;
+        position: relative;
+        border-radius: 15px;
+    }
+    .saleorrent .right p {
+        position: absolute;
+        top: 50%;
+        left: 29%;
+        color: white;
+        font-weight: 400;
+        font-size: 32px;
+        letter-spacing: 10px;
+    }
+
+    .about{
+        height: auto;
+    }
+    .about .div1{
+        width: 90%;
+        flex-direction: column;
+        padding: 0 12px 0 12px !important;
+    }
+    .about .div1 .photo img{
+        width: 100%;
+        height: 446px;
+    }
+    .about .div1 .div2 button{
+        width: 70% !important;
+    }
+
+
+    .maletwo .maleimage img{
+        width: 350px;
+    }
+    .maletwo .w-75{
+        width: 100% !important;
+    }
+
+
+    .femaletwo .femaleimage img{
+        width: 350px;
+    }
+    .femaletwo .w-75{
+        width: 100% !important;
+    }
+
+    
+}
+
+/* @media only screen and (max-width: 1567px){
+    .howtowork .justify-content-between{
+        justify-content: center !important;
+    }
+} */

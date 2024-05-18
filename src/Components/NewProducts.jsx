@@ -17,7 +17,7 @@ const NewProducts = () => {
     return (
         <div className="album pb-5 d-flex justify-content-center">
             <div className="w-75">
-                <h1 className='my-5 pb-3 border-bottom border-black d-flex justify-content-between align-items-center'>Yeni gələnlər <a href='' className='text-dark fs-5'>Hamısına Bax -</a></h1>
+                <h1 className='my-5 pb-3 border-bottom border-black d-flex justify-content-between align-items-center'>Yeni gələnlər <a href='' className='all text-dark fs-5'>Hamısına Bax -</a><a href='' className='allres text-dark fs-5'>--</a></h1>
                 <div className="row mt-3 g-3">
                 {/* {product.slice(0,8).map((item) => (
                     <ShopCard key={item.id} photo={item.imagePath} title={item.title} price={item.price} />

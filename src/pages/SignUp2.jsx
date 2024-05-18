@@ -36,7 +36,8 @@ const SignUp2 = () => {
                         </div>
 
                         <div className="form-field col-lg-12 text-center">
-                            <button className='submit-btn' type='submit' >Növbəti</button>
+                            <a href='/signup' className='submit-btn m-2' type='submit' >Mağaza</a>
+                            <button className='submit-btn m-2' type='submit' >Növbəti</button>
                         </div>
                     </form>
                 </section>

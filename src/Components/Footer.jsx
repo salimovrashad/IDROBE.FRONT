@@ -9,7 +9,7 @@ import idlogo from "../images/LogoWhite.png"
 
 const Footer = () => {
     return (
-        <div className="container-fluid bg-black text-light">
+        <div className="footres bg-black text-light">
             <footer className="pt-5 container-fluid w-75">
                 <div className="row d-flex justify-content-between">
                     <div className="col-md-4 mb-3 me-3">
@@ -60,7 +60,7 @@ const Footer = () => {
                     
                 </div>
                 <div className="d-flex flex-column flex-sm-row justify-content-center py-4 mt-5 border-top">
-                    <p className='text-white-50'>İDrobe.az © 2023. Bütün hüquqlar qorunur.</p>
+                    <p className='text-white-50 text-center'>İDrobe.az © 2023. Bütün hüquqlar qorunur<a href='https://github.com/salimovrashad'>.</a></p>
                 </div>
             </footer>
         </div>

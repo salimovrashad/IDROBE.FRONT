@@ -5,7 +5,7 @@ import { IoMdHeartEmpty } from "react-icons/io";
 
 const ShopCard = ({ photo, photo2, title, price, id }) => {
     return (
-        <div className="col-md-3 col-sm-6">
+        <div className="col-md-4 col-lg-3 col-6">
             <div className="product-grid">
                 <div className="product-image">
                     <a href="/" className="image">

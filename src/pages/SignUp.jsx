@@ -45,7 +45,8 @@ const SignUp = () => {
                         </div>
 
                         <div className="form-field col-lg-12 text-center">
-                            <button className='submit-btn' type='submit' >Növbəti</button>
+                            <a href='/signup2' className='submit-btn m-2' type='submit' >Fiziki Şəxs</a>
+                            <button className='submit-btn m-2' type='submit' >Növbəti</button>
                         </div>
                     </form>
                 </section>
